@@ -1,15 +1,9 @@
 {
     "name": "@genx/sys",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Gen-X operating system related utility library for nodejs.",
     "main": "lib/commonjs/index",
     "module": "lib/module/index",
-    "files": [
-        "lib",
-        "!**/__tests__",
-        "!**/__fixtures__",
-        "!**/__mocks__"
-    ],
     "publishConfig": {
         "access": "public"
     },

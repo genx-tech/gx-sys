@@ -3,6 +3,7 @@
 .babelrc
 .gitignore
 .gitattributes
+.prettierignore
 .travis.yml
 .editorconfig
 jsconfig.json
@@ -19,4 +20,5 @@ coverage
 .nyc_output
 __tests__
 lib/**/*.spec.js
+lib/.DS_Store
 allure-results
