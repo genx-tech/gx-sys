@@ -5,7 +5,6 @@
     "main": "lib/commonjs/index",
     "module": "lib/module/index",
     "files": [
-        "src",
         "lib",
         "!**/__tests__",
         "!**/__fixtures__",
