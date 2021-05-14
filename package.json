@@ -1,6 +1,6 @@
 {
     "name": "@genx/sys",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Gen-X operating system related utility library for nodejs.",
     "main": "lib/commonjs/index",
     "module": "lib/module/index",
@@ -139,7 +139,7 @@
         "useTabs": false
     },
     "dependencies": {
-        "@genx/july": "github:genx-tech/gx-july",
+        "@genx/july": "^0.2.0",
         "fs-extra": "^10.0.0",
         "glob": "^7.1.7",
         "systemjs": "^0.19.47"
