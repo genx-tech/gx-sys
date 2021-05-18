@@ -46,7 +46,9 @@ function tryRequireBy(packageName, mainModule, throwWhenNotFound) {
 
 /**
  * Try require a package module and show install tips if not found.
+ * @alias helpers.tryRequire
  * @param {string} packageName
+ * @returns {object}
  */
 function tryRequire(packageName, basePath) {    
     return tryRequireBy(packageName, require.main, basePath == null) || tryRequireBy(packageName, basePath, true);

@@ -2,6 +2,7 @@ import childProcess from 'child_process';
 
 /**
  * Execute a shell command.
+ * @alias module:cmd.run_
  * @param {string} cmd - Command line to execute
  * @param {object} options
  * @returns {Promise.<Object>}
@@ -25,6 +26,7 @@ export const run_ = (cmd, options) =>
 
 /**
  * Execute a shell command and lively output
+ * @alias module:cmd.runLive_
  * @param {string} cmd - Command line to execute
  * @param {Array} [args] - Arguments list
  * @returns {Promise.<Object>}
@@ -53,6 +55,7 @@ export const runLive_ = (cmd, args, onStdOut, onStdErr, options) =>
 
 /**
  * Execute a shell command synchronously
+ * @alias module:cmd.runSync
  * @param {string} cmd - Command line to execute
  * @returns {string}
  */

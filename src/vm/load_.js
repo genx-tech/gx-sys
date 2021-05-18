@@ -3,6 +3,7 @@ import _each from 'lodash/each';
 
 /**
  * Load a js file in sand box.
+ * @alias vm.load_
  * @param {string} file - Source file
  * @param {object} [variables] - Variables as global
  * @param {object} [deps] - Dependencies
