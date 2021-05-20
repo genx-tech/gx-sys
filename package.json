@@ -141,7 +141,7 @@
     "dependencies": {
         "@genx/july": "^0.2.0",
         "fs-extra": "^10.0.0",
-        "glob": "^7.1.7",
+        "glob-promise": "^4.1.0",
         "systemjs": "^0.19.47"
     },
     "react-native-builder-bob": {
