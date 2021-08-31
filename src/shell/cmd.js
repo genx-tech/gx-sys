@@ -2,7 +2,7 @@ import childProcess from 'child_process';
 
 /**
  * Execute a shell command.
- * @alias module:cmd.run_
+ * @function module:cmd.run_
  * @param {string} cmd - Command line to execute
  * @param {object} options
  * @returns {Promise.<Object>}
@@ -26,9 +26,12 @@ export const run_ = (cmd, options) =>
 
 /**
  * Execute a shell command and lively output
- * @alias module:cmd.runLive_
+ * @function module:cmd.runLive_
  * @param {string} cmd - Command line to execute
- * @param {Array} [args] - Arguments list
+ * @param {Array} [args] - Arguments list * 
+ * @param {*} onStdOut - 
+ * @param {*} onStdErr 
+ * @param {*} options 
  * @returns {Promise.<Object>}
  */
 export const runLive_ = (cmd, args, onStdOut, onStdErr, options) =>
@@ -41,11 +44,12 @@ export const runLive_ = (cmd, args, onStdOut, onStdErr, options) =>
 
         if (onStdOut) {
             ps.stdout.on('data', onStdOut);
+            onStdErr ??= onStdOut;
         }
 
         if (onStdErr) {
             ps.stderr.on('data', onStdErr);
-        }
+        } 
 
         ps.on('close', (code) => (e ? reject(e) : resolve(code)));
         ps.on('error', (error) => {
@@ -55,7 +59,7 @@ export const runLive_ = (cmd, args, onStdOut, onStdErr, options) =>
 
 /**
  * Execute a shell command synchronously
- * @alias module:cmd.runSync
+ * @function module:cmd.runSync
  * @param {string} cmd - Command line to execute
  * @returns {string}
  */
