@@ -139,9 +139,9 @@
         "useTabs": false
     },
     "dependencies": {
-        "@genx/july": "^0.2.0",
+        "@genx/july": "^0.2.10",
         "fs-extra": "^10.0.0",
-        "glob-promise": "^4.1.0",
+        "glob-promise": "^4.2.0",
         "systemjs": "^0.19.47"
     },
     "react-native-builder-bob": {
