@@ -12,7 +12,6 @@ npm install @genx/sys
 
 ```js
 import { fs, glob, cmd, load_ } from '@genx/sys';
-
 ```
 
 ## License

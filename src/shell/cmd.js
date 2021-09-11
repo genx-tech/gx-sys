@@ -28,10 +28,10 @@ export const run_ = (cmd, options) =>
  * Execute a shell command and lively output
  * @function module:cmd.runLive_
  * @param {string} cmd - Command line to execute
- * @param {Array} [args] - Arguments list * 
- * @param {*} onStdOut - 
- * @param {*} onStdErr 
- * @param {*} options 
+ * @param {Array} [args] - Arguments list *
+ * @param {*} onStdOut -
+ * @param {*} onStdErr
+ * @param {*} options
  * @returns {Promise.<Object>}
  */
 export const runLive_ = (cmd, args, onStdOut, onStdErr, options) =>
@@ -45,11 +45,15 @@ export const runLive_ = (cmd, args, onStdOut, onStdErr, options) =>
         if (onStdOut) {
             ps.stdout.on('data', onStdOut);
             onStdErr ??= onStdOut;
+        } else {
+            ps.stdout.on('data', (data) => console.log(data.toString()));
         }
 
         if (onStdErr) {
             ps.stderr.on('data', onStdErr);
-        } 
+        } else {
+            ps.stdout.on('data', (data) => console.error(data.toString()));
+        }
 
         ps.on('close', (code) => (e ? reject(e) : resolve(code)));
         ps.on('error', (error) => {

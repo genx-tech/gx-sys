@@ -9,11 +9,11 @@ import _each from 'lodash/each';
  * @param {object} [deps] - Dependencies
  * @returns {AsyncFunction.<*>}
  */
-async function load_(file, variables, deps) {    
+async function load_(file, variables, deps) {
     let loader = new System.constructor();
 
     if (variables) {
-        loader.config({'global': variables});
+        loader.config({ global: variables });
     }
 
     if (deps) {
