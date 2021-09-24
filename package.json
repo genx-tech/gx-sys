@@ -1,6 +1,6 @@
 {
     "name": "@genx/sys",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "description": "Gen-X operating system related utility library for nodejs.",
     "main": "lib/commonjs/index",
     "module": "lib/module/index",
