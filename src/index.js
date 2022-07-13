@@ -18,5 +18,8 @@ export { default as load_ } from './vm/load_';
  */
 export { default as tryRequire } from './helpers/tryRequire';
 
+/** @module fs */
+export * from './fs';
+
 /** @module cmd */
 export * as cmd from './shell/cmd';
