@@ -1,5 +1,5 @@
 //babel config for node.js app
-const targetLTSVersion = '12';
+const targetLTSVersion = '16';
 
 const isBabelRegister = (caller) => !!(caller && caller.name === '@babel/register');
 
@@ -29,6 +29,7 @@ module.exports = function (api) {
                 '@babel/env',
                 {
                     ...targets,
+                    "useBuiltIns": "entry",
                     corejs: { version: '3.8', proposals: true },
                 },
             ],

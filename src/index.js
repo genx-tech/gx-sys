@@ -9,11 +9,6 @@ export { default as fs } from 'fs-extra';
 export { default as glob } from 'glob-promise';
 
 /**
- * @namespace vm
- */
-export { default as load_ } from './vm/load_';
-
-/**
  * @namespace helpers
  */
 export { default as tryRequire } from './helpers/tryRequire';

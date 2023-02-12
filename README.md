@@ -11,8 +11,12 @@ npm install @genx/sys
 ## Usage
 
 ```js
-import { fs, glob, cmd, load_ } from '@genx/sys';
+import { fs, glob, cmd } from '@genx/sys';
 ```
+
+## API Document
+
+[Check GitHub page](https://genx-tech.github.io/gx-sys)
 
 ## License
 
