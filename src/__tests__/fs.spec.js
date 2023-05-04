@@ -1,7 +1,7 @@
 import { isDir, isDir_, isDirEmpty, isDirEmpty_ } from '../fs';
 import fs from 'fs-extra';
 
-describe.only('unit:fs', function () {
+describe('unit:fs', function () {
     it('fs isDir', function () {
         isDir(__filename).should.not.be.ok();
         isDir(__dirname).should.be.ok();

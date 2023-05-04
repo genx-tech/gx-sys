@@ -58,11 +58,18 @@ function tryRequire(packageName, basePath) {
     // eslint-disable-next-line no-undef
     basePath != null || (basePath = process.cwd());
 
-    // hack for bun sh
-    return require.main
-        ? tryRequireBy(packageName, require.main, basePath == null) ||
-              tryRequireBy(packageName, basePath, true)
-        : require(packageName);
+    try {
+        return require(packageName);
+    } catch (error) {
+        if (error.code !== 'MODULE_NOT_FOUND') {
+            throw error;
+        }
+    }
+
+    return (
+        tryRequireBy(packageName, require.main, basePath == null) ||
+        tryRequireBy(packageName, basePath, true)
+    );
 }
 
 export default tryRequire;

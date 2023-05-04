@@ -13,7 +13,7 @@ describe('unit:tryRequire', function() {
         }, /^Error: Module "non-exist" not found. Try run "npm install non-exist" to install the dependency./);        
     });  
 
-    it('require a module with basePath',async function () {
+    it('require a local non-exist module',async function () {
         should.throws(() => {
             tryRequire('./fakeLib');
         }, /^Error: Cannot find module '.\/fakeLib'/);       
