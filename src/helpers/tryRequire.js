@@ -54,14 +54,15 @@ function tryRequireBy(packageName, mainModule, throwWhenNotFound) {
  * @param {string} packageName
  * @returns {object}
  */
-function tryRequire(packageName, basePath) {    
+function tryRequire(packageName, basePath) {
     // eslint-disable-next-line no-undef
-    basePath != null || (basePath = process.cwd()); 
+    basePath != null || (basePath = process.cwd());
 
-    return (
-        tryRequireBy(packageName, require.main, basePath == null) ||
-        tryRequireBy(packageName, basePath, true)
-    );
+    // hack for bun sh
+    return require.main
+        ? tryRequireBy(packageName, require.main, basePath == null) ||
+              tryRequireBy(packageName, basePath, true)
+        : require(packageName);
 }
 
 export default tryRequire;
